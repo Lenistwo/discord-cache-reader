@@ -76,9 +76,9 @@ func checkError(err error, message string) {
 
 func loadConfig() {
 	file, err := ioutil.ReadFile(ConfigFileName)
-	checkError(err, "Error During Loading ConfigFileName File")
+	checkError(err, "Error During Loading Config File")
 	err = json.Unmarshal(file, &config)
-	checkError(err, "Error During Unmarshaling ConfigFileName File")
+	checkError(err, "Error During Unmarshaling Config File")
 }
 
 func createOutputDirIfNotExist() {
