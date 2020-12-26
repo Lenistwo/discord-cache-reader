@@ -40,7 +40,7 @@ func init() {
 
 func main() {
 	open, err := os.Open(appdataPath + DiscordCacheDir)
-	checkError(err, "Cannot Open Discord Cache Folder")
+	checkError(err, "Cannot Open Discord Cache Directory")
 	defer open.Close()
 	cacheFiles, err := open.Readdir(AllInDir)
 	wg.Add(len(cacheFiles))
